@@ -114,3 +114,39 @@ assistantTab.addEventListener('click', function(){
     document.getElementById('expense-form').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
 });
+
+
+// live validation for input
+
+document.getElementById('income').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('income').value);
+        
+    if(isNaN(inputValue) || inputValue <=0){
+        document.getElementById('income-error').classList.remove('hidden');
+        return;    
+    }
+});
+document.getElementById('software').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('software').value);
+        
+    if(isNaN(inputValue) || inputValue <=0){
+        document.getElementById('software-error').classList.remove('hidden');
+        return;    
+    }
+});
+document.getElementById('courses').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('courses').value);
+        
+    if(isNaN(inputValue) || inputValue <=0){
+        document.getElementById('courses-error').classList.remove('hidden');
+        return;    
+    }
+});
+document.getElementById('internet').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('internet').value);
+        
+    if(isNaN(inputValue) || inputValue <=0){
+        document.getElementById('internet-error').classList.remove('hidden');
+        return;    
+    }
+});
